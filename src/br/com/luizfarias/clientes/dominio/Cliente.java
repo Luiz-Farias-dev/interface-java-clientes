@@ -2,6 +2,7 @@ package br.com.luizfarias.clientes.dominio;
 
 import br.com.luizfarias.clientes.dominio.enums.TipoSexo;
 
+import java.util.Arrays;
 import java.util.UUID;
 
 public class Cliente {
@@ -54,5 +55,16 @@ public class Cliente {
 
     public void setFoto(byte[] foto) {
         this.foto = foto;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente [" +
+                "codigo =" + codigo +
+                ", nome =" + nome + '\'' +
+                ", cpf =" + cpf + '\'' +
+                ", sexo =" + sexo +
+                ", foto =" + Arrays.toString(foto) +
+                ']';
     }
 }
